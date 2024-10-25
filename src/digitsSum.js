@@ -4,5 +4,12 @@
  * @returns {number}
  */
 module.exports.digitsSum = function digitsSum(n) {
-  throw new Error('Not implemented'); // remove this line
+  n = Math.abs(n);
+  sum = Math.floor(n % 10);
+  currentDigitNumber = 100;
+  while (n > currentDigitNumber / 10) {
+    sum += Math.floor(((n % currentDigitNumber) / currentDigitNumber) * 10);
+    currentDigitNumber *= 10;
+  }
+  return sum;
 };

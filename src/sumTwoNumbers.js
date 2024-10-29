@@ -5,12 +5,12 @@
  * @returns {number}
  */
 module.exports.sumTwoNumbers = function sumTwoNumbers(firstNumber, secondNumber) {
-  //these two ARE NOT NUMBERS but they were in test so here you go
-  if (firstNumber === '    -5    ' && secondNumber === '   -    10') {
-    return -15;
-  }
-  num1 = parseFloat(firstNumber);
-  num2 = parseFloat(secondNumber, 10);
+  fn = 0;
+  sn = 0;
+  fn = firstNumber.toString().replace(/[^\.\-\d]/gi, '');
+  sn = secondNumber.toString().replace(/[^\.\-\d]/gi, '');
+  num1 = parseFloat(fn, 10);
+  num2 = parseFloat(sn, 10);
   if (typeof num1 != 'number' || typeof num2 != 'number') {
     throw new Error(`Can't sum ${num1 + ' ' + num2}`);
   }

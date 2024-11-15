@@ -4,5 +4,12 @@
  * @returns {Object}
  */
 module.exports.hundredAfterOdd = function hundredAfterOdd(arr) {
-  throw new Error('Not implemented'); // remove me and write a solution
+  out = [];
+  for (i = 0; i < arr.length; i++) {
+    out.push(arr[i]);
+    if (arr[i] % 2 != 0) {
+      out.push(100);
+    }
+  }
+  return out;
 };

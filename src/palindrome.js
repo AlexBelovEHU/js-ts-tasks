@@ -13,5 +13,11 @@
  * @returns {function}
  */
 module.exports.palindrome = function palindrome(TestUtils) {
-  throw new Error('Not implemented'); // remove this line and create your solution
+  return st => {
+    let regex = /[\W_]/gi;
+    st = st.toLowerCase().replaceAll(regex, '');
+    objgect = {};
+    objgect['str'] = st;
+    return TestUtils.isPalindrome.call(objgect);
+  };
 };

@@ -12,6 +12,7 @@
  * @param {{ isPalindrome: function() }} TestUtils
  * @returns {function}
  */
+//test comment
 module.exports.palindrome = function palindrome(TestUtils) {
   return st => {
     let regex = /[\W_]/gi;

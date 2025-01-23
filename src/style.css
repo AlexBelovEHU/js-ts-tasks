@@ -65,7 +65,7 @@ p,a{
 }
 .iphone-highlights{
   display: flex;
-  margin:16px;
+  margin:16px 0px;
 }
 .iphone-highlight{
   text-align: center;

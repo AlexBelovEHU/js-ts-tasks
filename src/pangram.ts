@@ -6,5 +6,50 @@
  * @returns {boolean}
  */
 module.exports.pangram = function (word: string | number): boolean {
-  throw new Error('Not implemented'); // delete this line and write your code
+  const letters: string[] = [
+    'a',
+    'b',
+    'c',
+    'd',
+    'e',
+    'f',
+    'g',
+    'h',
+    'i',
+    'j',
+    'k',
+    'l',
+    'm',
+    'n',
+    'o',
+    'p',
+    'q',
+    'r',
+    's',
+    't',
+    'u',
+    'v',
+    'w',
+    'x',
+    'y',
+    'z',
+  ];
+  const numbers: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+  if (typeof word == 'string') {
+    let res: boolean = true;
+    letters.forEach(letter => {
+      if (!word.includes(letter)) {
+        res = false;
+      }
+    });
+    return res;
+  } else {
+    let res: boolean = true;
+    numbers.forEach(num => {
+      if (!word.toString().includes(num.toString())) {
+        res = false;
+      }
+    });
+    return res;
+  }
 };
